@@ -125,6 +125,20 @@ body {
     border: 8px solid var(--cor-terciaria);
 }
 
+.apresentacao__img__projetos {
+    margin: 2rem;
+    width: 70%;
+    border: 8px solid var(--cor-secundaria);
+    border-radius: 8px;
+    transition: 1s;
+}
+
+.apresentacao__img__projetos:hover {
+    width: 71%;
+    transition: 1s;
+    border: 8px solid var(--cor-terciaria);
+}
+
 .rodape {
     padding: 1.5rem;
     color: var(--cor-primaria);
