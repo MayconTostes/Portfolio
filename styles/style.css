@@ -80,6 +80,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 32px;
+    box-sizing: border-box;
 }
 
 .apresentacao__links__subtitulo {
@@ -103,7 +104,6 @@ body {
     padding: 1.34rem 0rem;
     width: 50%;
     transition: 0.3s;
-    box-sizing: border-box;
 }
 
 .apresentacao__links__navegacao:hover {
@@ -154,5 +154,6 @@ body {
 
     .apresentacao__links__navegacao {
         display: inline-block;
+        width: 15rem;
     }
 }
