@@ -5,6 +5,7 @@
     --cor-secundaria: #F8EDFF;
     --cor-terciaria: #525CEB;
     --cor-hover: #454349fe;
+    --cor-transparent: #ffffff00;
 
     --font-primaria: "Krona One", sans-serif;
     --font-secundaria: "Montserrat", sans-serif;
@@ -27,7 +28,7 @@ body {
 }
 
 .cabecalho {
-    padding: 2% 0% 0% 15%;
+    padding: 2% 0% 2% 15%;
 }
 
 .cabecalho__menu {
@@ -41,10 +42,14 @@ body {
     font-weight: 600;
     color: var(--cor-secundaria);
     text-decoration: none;
+    padding: 4px;
+    border: 4px solid var(--cor-transparent);
+    transition: 0.5s;
 }
 
 .cabecalho__menu__link:hover {
     border-bottom: 4px solid var(--cor-secundaria);
+    transition: 0.8s;
 }
 
 .apresentacao {
@@ -113,63 +118,13 @@ body {
 .apresentacao__img {
     width: 50%;
     transition: 1s;
-    border: 8px solid var(--cor-secundaria);
+    border: 8px solid var(--cor-hover);
     border-radius: 8px;
 }
 
 .apresentacao__img:hover {
-    width: 51%;
     transition: 1s;
     border: 8px solid var(--cor-terciaria);
-}
-
-.apresentacao__projetos {
-    padding: 5% 15%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 82px;
-}
-
-.apresentacao__conteudo__projetos {
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.apresentacao__conteudo__projetos__titulo {
-    padding-top: 2.5rem;
-    text-align: center;
-    font-size: 2.25rem;
-    font-family: var(--font-primaria);
-}
-
-.apresentacao__conteudo__projetos__links {
-    display: flex;
-    padding: 4%;
-    justify-content: space-between;
-    align-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.apresentacao__conteudo__projetos_navegacao {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    border: 5px solid var(--cor-terciaria);
-    border-radius: 8px;
-    width: auto;
-    transition: 0.3s;
-}
-
-.apresentacao__projetos__img {
-    width: 77.43rem;
-    height: 36.81rem;
 }
 
 .rodape {
@@ -182,38 +137,129 @@ body {
     font-weight: 400;
 }
 
-@media (max-width: 1300px) {
+@media (min-width: 320px) and (max-width: 480px) {
     .cabecalho {
         padding: 10%;
     }
+
     .cabecalho__menu {
-        justify-content: center;
+        display: grid;
+        justify-items: center;
+        gap: 10px;
     }
 
     .apresentacao {
-        flex-direction: column-reverse;
         padding: 5%;
+        display: grid;
     }
 
     .apresentacao__conteudo {
         width: auto;
-        gap: 40px;
+        justify-items: center;
+        
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: 1rem;
+        text-align: justify;
+    }
+    
+    .apresentacao__conteudo__paragrafo {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .apresentacao__links__subtitulo {
+        font-size: 1rem;
     }
 
     .apresentacao__links__navegacao {
         display: inline-block;
-        width: 15rem;
+        width: 11.25rem;
+        text-align: center;
     }
 
     .apresentacao__links__navegacao:hover {
-        width: 16rem;
+        width: 12.25rem;
     }
 
     .apresentacao__img {
-        width: 60%;
+        width: 70%;
+        margin: auto;
+        border: 8px solid var(--cor-hover);
     }
     
     .apresentacao__img:hover {
-        width: 61%;
+        width: 70%;
+        border: 8px solid var(--cor-terciaria);
+    }
+
+    .rodape {
+        padding: 5%;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .apresentacao {
+        padding: 5%;
+        display: grid;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+        justify-items: center;
+        
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+    
+    .apresentacao__conteudo__paragrafo {
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+
+    .apresentacao__links__subtitulo {
+        font-size: 1.5rem;
+    }
+
+    .apresentacao__links__navegacao {
+        display: inline-block;
+        width: 15.25rem;
+        text-align: center;
+    }
+
+    .apresentacao__links__navegacao:hover {
+        width: 16.25rem;
+    }
+
+    .apresentacao__img {
+        width: 70%;
+        margin: auto;
+        border: 8px solid var(--cor-hover);
+    }
+    
+    .apresentacao__img:hover {
+        width: 70%;
+        border: 8px solid var(--cor-terciaria);
+    }
+
+    .rodape {
+        padding: 5%;
+        font-size: 1.5rem;
     }
 }
